@@ -11,9 +11,9 @@ const Nav = () => {
   //there are only two locations, home and potential candidates; potential candidates is using the savedCandidates.tsx file
 
   return (
-    <nav>
+    <nav className="nav">
     <ul>
-      <li>
+      <li className="nav-item">
         <Link
           to="/"
           className={
@@ -24,7 +24,7 @@ const Nav = () => {
           Home
         </Link>
       </li>
-      <li>
+      <li className="nav-item">
         <Link 
         to= "SavedCandidates"
         className={
