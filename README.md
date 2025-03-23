@@ -10,7 +10,12 @@
 ## License: MIT license. 
 
 ## Contributing: 
-
+There was starter code for this project in the src folder including:
+Main.tsx
+Index.css
+App.tsx 
+Pages/CandidateSearch.tst; ErrorPage.tsx; SavedCandidates.tsx
+Api/Api.tsx
 
 
 # Module 13 Challenge: Candidate Search
