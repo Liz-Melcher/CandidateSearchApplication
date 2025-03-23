@@ -26,6 +26,7 @@ const Nav = () => {
         className={
           location.pathname === '/SavedCandidates'
           ? 'nav-link active'
+          : 'nav-link'
         }
         > Potential Candidates
         </Link>
