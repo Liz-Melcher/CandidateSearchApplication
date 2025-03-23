@@ -1,11 +1,15 @@
 // TODO: Add necessary code to display the navigation bar and link between the pages
 
 import { Link, useLocation} from 'react-router-dom'
+//Link is used to navigate between the routes
+//useLocation gives access to the current URL path 
 
 const Nav = () => {
   const location= useLocation()
+  //get the current URL path 
+  //highlight the active NavLink 
+  //there are only two locations, home and potential candidates; potential candidates is using the savedCandidates.tsx file
 
-  
   return (
     <nav>
     <ul>
