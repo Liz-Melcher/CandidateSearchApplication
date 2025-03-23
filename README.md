@@ -6,6 +6,7 @@
 ## Description: This project is a React + TypeScript candidate search app that integrates with the GitHub API to help employers find potential candidates. Users can review GitHub profiles, accept or reject candidates, and view a list of saved profiles. The app includes persistent storage and is deployed using Render.
 
 ## Installation: 
+src/api/api.tsx have several lines of console.log code that is used for development and testing, but is not needed to run the application. There are comments in the code for these lines. 
 
 ## License: MIT license. 
 
