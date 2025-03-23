@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-    <ul>
+    <ul style={{ display: 'flex', paddingLeft: 0 }}>
       <li className="nav-item">
         <Link
           to="/"
