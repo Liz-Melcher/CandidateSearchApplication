@@ -1,3 +1,5 @@
+console.log('Test message:', import.meta.env.VITE_TEST_MESSAGE);
+
 const searchGithub = async () => {
   try {
     const start = Math.floor(Math.random() * 100000000) + 1;
@@ -12,7 +14,10 @@ const searchGithub = async () => {
           Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
         },
       }
+      
     );
+    console.log('Using token:', import.meta.env.VITE_GITHUB_TOKEN);
+
     console.log('Response:', response);
     //This logs the raw response from the fetch call. For debugging to check for error types like  200, 404, 403, etc.
     const data = await response.json();
@@ -53,5 +58,15 @@ const searchGithubUser = async (username: string) => {
     return {};
   }
 };
+
+// Add this to see ALL environment variables available
+console.log('All Vite env variables:', import.meta.env);
+
+// Check if your token variable exists at all
+if (import.meta.env.VITE_GITHUB_TOKEN) {
+  console.log('Token exists with length:', import.meta.env.VITE_GITHUB_TOKEN.length);
+} else {
+  console.log('Token is missing or undefined');
+} 
 
 export { searchGithub, searchGithubUser };
