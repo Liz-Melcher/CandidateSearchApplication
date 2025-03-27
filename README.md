@@ -1,11 +1,15 @@
 
-## GitHub Repository:
+## GitHub Repository: https://github.com/Liz-Melcher/CandidateSearchApplication 
 
-## Render Deployed Page: 
+## Render Deployed Page: https://candidatesearchapplication-bucd.onrender.com/ 
 
-## Description: This project is a React + TypeScript candidate search app that integrates with the GitHub API to help employers find potential candidates. Users can review GitHub profiles, accept or reject candidates, and view a list of saved profiles. The app includes persistent storage and is deployed using Render.
+## Description: 
+This project is a React + TypeScript candidate search app that integrates with the GitHub API to help employers find potential candidates. Users can review GitHub profiles, accept or reject candidates, and view a list of saved profiles. The app includes persistent storage and is deployed using Render.
 
 ## Installation: 
+Install vite.
+For this project, the .env file is in the /environment folder, this is a change from the default Vite installation.
+Git Hub API: Original API Key expires in June 2025
 src/api/api.tsx have several lines of console.log code that is used for development and testing, but is not needed to run the application. There are comments in the code for these lines. 
 
 ## License: MIT license. 

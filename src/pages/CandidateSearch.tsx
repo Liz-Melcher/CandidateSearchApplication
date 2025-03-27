@@ -6,7 +6,6 @@ import Candidate from '../interfaces/Candidate.interface';
 const CandidateSearch = () => {
   const [candidateList, setCandidateList] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
   const [candidate, setCandidate] = useState<Candidate | null>(null);
 
   useEffect(() => {
@@ -18,15 +17,6 @@ const CandidateSearch = () => {
     fetchCandidates();
   }, []);
 
-  // useEffect(() => {
-  //   async function fetchCandidate() {
-  //     const rawUser = await searchGithubUser('octocat'); // You can make this dynamic later
-  //     const formatted = transformGithubUserToCandidate(rawUser);
-  //     setCandidate(formatted);
-  //   }
-
-  //   fetchCandidate();
-  // }, []);
   async function loadCandidate() {
     if (candidateList.length > 0 && currentIndex< candidateList.length) {
       const username = candidateList[currentIndex].login
@@ -44,18 +34,18 @@ const CandidateSearch = () => {
   }, [candidateList, currentIndex]);
 
   const handleSave = () => {
-    let savedCandidateList : Candidate[] = [] 
-    const canList = localStorage.getItem("candidateSearch")
-    if(typeof canList === "string"){
-      savedCandidateList = JSON.parse(canList)
-    }
+    const canList = localStorage.getItem("candidateSearch");
+    const savedList: Candidate[] = canList ? JSON.parse(canList) : [];
+  
     if (candidate) {
-      setSavedCandidates([...savedCandidates, candidate]);
-      localStorage.setItem("candidateSearch",JSON.stringify(savedCandidates))
-      console.log(savedCandidates, candidate)
+      const updatedList = [...savedList, candidate];
+      localStorage.setItem("candidateSearch", JSON.stringify(updatedList));
     }
+  
     setCurrentIndex(prev => prev + 1);
   };
+  
+  
 
   const handleSkip = () => {
     setCurrentIndex(prev => prev + 1);
