@@ -60,7 +60,7 @@ const searchGithubUser = async (username: string) => {
 };
 
 // Add this to see ALL environment variables available
-console.log('All Vite env variables:', import.meta.env);
+//console.log('All Vite env variables:', import.meta.env);
 
 // Check if your token variable exists at all
 if (import.meta.env.VITE_GITHUB_TOKEN) {

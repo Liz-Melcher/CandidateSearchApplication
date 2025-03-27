@@ -1,7 +1,7 @@
 
 ## GitHub Repository: https://github.com/Liz-Melcher/CandidateSearchApplication 
 
-## Render Deployed Page: https://candidatesearchapplication-bucd.onrender.com/ 
+## Render Deployed Page: https://candidatesearchapplication-m025.onrender.com
 
 ## Description: 
 This project is a React + TypeScript candidate search app that integrates with the GitHub API to help employers find potential candidates. Users can review GitHub profiles, accept or reject candidates, and view a list of saved profiles. The app includes persistent storage and is deployed using Render.
